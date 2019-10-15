@@ -1,0 +1,3 @@
+[submodule "source-content"]
+	path = source-content
+	url = git@github.com:twostraws/HackingWithSwift.git
