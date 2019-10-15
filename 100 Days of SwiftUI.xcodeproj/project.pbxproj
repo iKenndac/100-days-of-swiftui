@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50A0B17F2350BA2D0011DD30 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A0B17F2350BA2D0011DD30 /* 100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A0B1822350BA2D0011DD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50A0B1842350BA2D0011DD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		50A0B1862350BA2D0011DD30 /* WeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		50A0B1762350BA2D0011DD30 = {
 			isa = PBXGroup;
 			children = (
-				50A0B1812350BA2D0011DD30 /* WeSplit */,
+				50A0B1812350BA2D0011DD30 /* 100 Days Of SwiftUI */,
 				50A0B1802350BA2D0011DD30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		50A0B1802350BA2D0011DD30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50A0B17F2350BA2D0011DD30 /* WeSplit.app */,
+				50A0B17F2350BA2D0011DD30 /* 100Days.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50A0B1812350BA2D0011DD30 /* WeSplit */ = {
+		50A0B1812350BA2D0011DD30 /* 100 Days Of SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				50A0B1822350BA2D0011DD30 /* AppDelegate.swift */,
@@ -67,7 +67,7 @@
 				50A0B1902350BA2E0011DD30 /* Info.plist */,
 				50A0B18A2350BA2E0011DD30 /* Preview Content */,
 			);
-			path = WeSplit;
+			path = "100 Days Of SwiftUI";
 			sourceTree = "<group>";
 		};
 		50A0B18A2350BA2E0011DD30 /* Preview Content */ = {
@@ -81,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50A0B17E2350BA2D0011DD30 /* WeSplit */ = {
+		50A0B17E2350BA2D0011DD30 /* 100Days */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50A0B1932350BA2E0011DD30 /* Build configuration list for PBXNativeTarget "WeSplit" */;
+			buildConfigurationList = 50A0B1932350BA2E0011DD30 /* Build configuration list for PBXNativeTarget "100Days" */;
 			buildPhases = (
 				50A0B17B2350BA2D0011DD30 /* Sources */,
 				50A0B17C2350BA2D0011DD30 /* Frameworks */,
@@ -93,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = WeSplit;
+			name = 100Days;
 			productName = WeSplit;
-			productReference = 50A0B17F2350BA2D0011DD30 /* WeSplit.app */;
+			productReference = 50A0B17F2350BA2D0011DD30 /* 100Days.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50A0B17A2350BA2D0011DD30 /* Build configuration list for PBXProject "WeSplit" */;
+			buildConfigurationList = 50A0B17A2350BA2D0011DD30 /* Build configuration list for PBXProject "100 Days of SwiftUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50A0B17E2350BA2D0011DD30 /* WeSplit */,
+				50A0B17E2350BA2D0011DD30 /* 100Days */,
 			);
 		};
 /* End PBXProject section */
@@ -289,14 +289,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"100 Days Of SwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WeSplit/Info.plist;
+				INFOPLIST_FILE = "100 Days Of SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.danielkennett.WeSplit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.danielkennett.100Days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,14 +308,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"100 Days Of SwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WeSplit/Info.plist;
+				INFOPLIST_FILE = "100 Days Of SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.danielkennett.WeSplit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.danielkennett.100Days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50A0B17A2350BA2D0011DD30 /* Build configuration list for PBXProject "WeSplit" */ = {
+		50A0B17A2350BA2D0011DD30 /* Build configuration list for PBXProject "100 Days of SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50A0B1912350BA2E0011DD30 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50A0B1932350BA2E0011DD30 /* Build configuration list for PBXNativeTarget "WeSplit" */ = {
+		50A0B1932350BA2E0011DD30 /* Build configuration list for PBXNativeTarget "100Days" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50A0B1942350BA2E0011DD30 /* Debug */,
