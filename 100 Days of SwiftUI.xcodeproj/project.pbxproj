@@ -15,6 +15,8 @@
 		50A0B18C2350BA2E0011DD30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A0B18B2350BA2E0011DD30 /* Preview Assets.xcassets */; };
 		50A0B18F2350BA2E0011DD30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A0B18D2350BA2E0011DD30 /* LaunchScreen.storyboard */; };
 		50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1962350CB930011DD30 /* UnitConverterView.swift */; };
+		50CB2A022358592F0043E711 /* ViewsAndModifiersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */; };
+		50CB2A04235862A30043E711 /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB2A03235862A30043E711 /* RootNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		50A0B18E2350BA2E0011DD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50A0B1902350BA2E0011DD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A0B1962350CB930011DD30 /* UnitConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterView.swift; sourceTree = "<group>"; };
+		50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiersView.swift; sourceTree = "<group>"; };
+		50CB2A03235862A30043E711 /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +66,11 @@
 			children = (
 				50A0B1822350BA2D0011DD30 /* AppDelegate.swift */,
 				50A0B1842350BA2D0011DD30 /* SceneDelegate.swift */,
+				50CB2A03235862A30043E711 /* RootNavigation.swift */,
 				50A0B1862350BA2D0011DD30 /* WeSplitView.swift */,
 				50A0B1962350CB930011DD30 /* UnitConverterView.swift */,
 				506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */,
+				50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */,
 				50A0B1882350BA2E0011DD30 /* Assets.xcassets */,
 				50A0B18D2350BA2E0011DD30 /* LaunchScreen.storyboard */,
 				50A0B1902350BA2E0011DD30 /* Info.plist */,
@@ -156,6 +162,8 @@
 				50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */,
 				50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */,
 				50A0B1872350BA2D0011DD30 /* WeSplitView.swift in Sources */,
+				50CB2A04235862A30043E711 /* RootNavigation.swift in Sources */,
+				50CB2A022358592F0043E711 /* ViewsAndModifiersView.swift in Sources */,
 				506A3C6B2355C0AD00FDA554 /* GuessTheFlagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

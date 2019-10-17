@@ -29,9 +29,8 @@ struct WeSplitView: View {
         let orderAmount = Double(checkAmount) ?? 0.0
         return orderAmount + (orderAmount * tipSelection)
     }
-
+    
     var body: some View {
-        NavigationView {
         Form {
             Section {
                 TextField("Amount", text: $checkAmount)
@@ -53,11 +52,10 @@ struct WeSplitView: View {
                 Text("$\(totalPerPerson, specifier: "%.2f")")
             }
             Section(header: Text("Overall Total".uppercased())) {
-                Text("$\(overallTotal, specifier: "%.2f")")
+                Text("$\(overallTotal, specifier: "%.2f")").foregroundColor(tipPercentageIndex == (tipPercentages.count - 1) ? .red : .black)
             }
         }
         .navigationBarTitle("WeSplit")
-        }
     }
 }
 struct WeSplitView_Previews: PreviewProvider {

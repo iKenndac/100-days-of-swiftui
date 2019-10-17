@@ -43,35 +43,33 @@ struct UnitConverterView: View {
     }
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("From".uppercased())) {
-                    TextField("Temperature", text: $input).keyboardType(.decimalPad)
-                    HStack {
-                        Text("From")
-                        Picker("Unit", selection: $fromUnit) {
-                            ForEach(units, id: \.self) {
-                                Text("\($0.symbol)")
-                            }
+        Form {
+            Section(header: Text("From".uppercased())) {
+                TextField("Temperature", text: $input).keyboardType(.decimalPad)
+                HStack {
+                    Text("From")
+                    Picker("Unit", selection: $fromUnit) {
+                        ForEach(units, id: \.self) {
+                            Text("\($0.symbol)")
                         }
-                        .pickerStyle(SegmentedPickerStyle())
                     }
-                    HStack {
-                        Text("To     ")
-                        Picker("Unit", selection: $toUnit) {
-                            ForEach(units, id: \.self) {
-                                Text("\($0.symbol)")
-                            }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                    }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                Section(header: Text("Result".uppercased())) {
-                    Text("\(output, specifier: "%.1f") \(toUnit.symbol)").frame(alignment: .center)
+                HStack {
+                    Text("To     ")
+                    Picker("Unit", selection: $toUnit) {
+                        ForEach(units, id: \.self) {
+                            Text("\($0.symbol)")
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
             }
-            .navigationBarTitle("Unit Converter")
+            Section(header: Text("Result".uppercased())) {
+                Text("\(output, specifier: "%.1f") \(toUnit.symbol)").frame(alignment: .center)
+            }
         }
+        .navigationBarTitle("Unit Converter")
     }
 }
 
