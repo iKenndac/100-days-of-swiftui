@@ -10,14 +10,20 @@ import SwiftUI
 
 struct RootNavigation: View {
 
+    var destinations: [(title: String, view: AnyView)] = [
+        ("WeSplit", AnyView(WeSplitView())),
+        ("Unit Converter", AnyView(UnitConverterView())),
+        ("Guess The Flag", AnyView(GuessTheFlagView())),
+        ("Views and Modifiers", AnyView(ViewsAndModifiersView()))
+    ]
+
     var body: some View {
         NavigationView {
-            Form {
-                NavigationLink(destination: WeSplitView()) { Text("WeSplit") }
-                NavigationLink(destination: UnitConverterView()) { Text("Unit Converter") }
-                NavigationLink(destination: GuessTheFlagView()) { Text("Guess The Flag") }
-                NavigationLink(destination: ViewsAndModifiersView()) { Text("Views and Modifiers") }
-            }.navigationBarTitle("Projects")
+            List {
+                ForEach(0..<destinations.count) { index in
+                    NavigationLink(destination: self.destinations[index].view) { Text(self.destinations[index].title) }
+                }
+            }.navigationBarTitle("Projects").listStyle(GroupedListStyle())
         }
     }
 }
