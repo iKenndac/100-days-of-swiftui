@@ -14,7 +14,8 @@ struct RootNavigation: View {
         ("WeSplit", AnyView(WeSplitView())),
         ("Unit Converter", AnyView(UnitConverterView())),
         ("Guess The Flag", AnyView(GuessTheFlagView())),
-        ("Views and Modifiers", AnyView(ViewsAndModifiersView()))
+        ("Views and Modifiers", AnyView(ViewsAndModifiersView())),
+        ("Rock, Paper, Scissors", AnyView(RockPaperScissorsView()))
     ]
 
     var body: some View {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505244972359B1D700D874A8 /* RockPaperScissorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505244962359B1D700D874A8 /* RockPaperScissorsView.swift */; };
 		506A3C6B2355C0AD00FDA554 /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */; };
 		50A0B1832350BA2D0011DD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1822350BA2D0011DD30 /* AppDelegate.swift */; };
 		50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1842350BA2D0011DD30 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505244962359B1D700D874A8 /* RockPaperScissorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsView.swift; sourceTree = "<group>"; };
 		506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		50A0B17F2350BA2D0011DD30 /* 100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A0B1822350BA2D0011DD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				50A0B1962350CB930011DD30 /* UnitConverterView.swift */,
 				506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */,
 				50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */,
+				505244962359B1D700D874A8 /* RockPaperScissorsView.swift */,
 				50A0B1882350BA2E0011DD30 /* Assets.xcassets */,
 				50A0B18D2350BA2E0011DD30 /* LaunchScreen.storyboard */,
 				50A0B1902350BA2E0011DD30 /* Info.plist */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A0B1832350BA2D0011DD30 /* AppDelegate.swift in Sources */,
+				505244972359B1D700D874A8 /* RockPaperScissorsView.swift in Sources */,
 				50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */,
 				50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */,
 				50A0B1872350BA2D0011DD30 /* WeSplitView.swift in Sources */,
