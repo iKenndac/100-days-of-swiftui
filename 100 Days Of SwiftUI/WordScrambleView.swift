@@ -18,6 +18,11 @@ struct WordScrambleView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
 
+    var score: Int {
+        // We can use flatMap here as well, but that's a bit obscure.
+        return usedWords.joined().count
+    }
+
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
@@ -37,6 +42,11 @@ struct WordScrambleView: View {
             return
         }
 
+        guard wordAllowedByRules(answer, sourceWord: rootWord) else {
+            wordError(title: "Word breaks rules!", message: "You can't have very short words or the source word.")
+            return
+        }
+
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
@@ -45,6 +55,7 @@ struct WordScrambleView: View {
         guard let wordsUrl = Bundle.main.url(forResource: "start", withExtension: "txt"),
             let allWords = try? String(contentsOf: wordsUrl) else { fatalError() }
         let words = allWords.components(separatedBy: .whitespacesAndNewlines)
+        usedWords.removeAll()
         rootWord = words.randomElement() ?? "silkworm"
     }
 
@@ -58,6 +69,12 @@ struct WordScrambleView: View {
             guard let index = pool.firstIndex(of: letter) else { return false }
             pool.remove(at: index)
         }
+        return true
+    }
+
+    func wordAllowedByRules(_ word: String, sourceWord: String) -> Bool {
+        guard word.count >= 3 else { return false }
+        guard word.lowercased() != sourceWord.lowercased() else { return false }
         return true
     }
 
@@ -81,9 +98,12 @@ struct WordScrambleView: View {
                 Image(systemName: "\($0.count).circle")
                 Text($0)
             }
+
+            Text("\(score)")
+
         }.navigationBarTitle(rootWord).onAppear(perform: startGame).alert(isPresented: $showingError) {
             Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
-        }
+        }.navigationBarItems(trailing: Button(action: startGame, label: { Text("Start Again") }))
     }
 }
 
