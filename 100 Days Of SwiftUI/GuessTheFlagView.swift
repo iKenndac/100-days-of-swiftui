@@ -38,6 +38,16 @@ struct GuessTheFlagView: View {
         showingScore = true
     }
 
+    /// Return `true` if a guess has been made, and if the index is for the correct and tapped answer.
+    func indexIsOfCurrentlyWinningAnswer(_ index: Int) -> Bool {
+        return index == correctAnswer && showingScore && index == tappedAnswer
+    }
+
+    /// Return `true` if a guess has been made, and if the index is for and incorrect and tapped answer.
+    func indexIsOfCurrentlyFailedAnswer(_ index: Int) -> Bool {
+        return index != correctAnswer && showingScore && index == tappedAnswer
+    }
+
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
@@ -54,11 +64,16 @@ struct GuessTheFlagView: View {
                 }
 
                 ForEach(0..<3) { index in
-                    Button(action: {
-                        self.flagTapped(index)
+                    return Button(action: {
+                        withAnimation(.default) { self.flagTapped(index) }
                     }, label: {
                         FlagImage(flagName: self.countries[index])
                     })
+                    .opacity(self.showingScore && index != self.tappedAnswer ? 0.25 : 1.0)
+                    .rotation3DEffect(.degrees(self.indexIsOfCurrentlyWinningAnswer(index) ? 360.0 : 0.0),
+                                      axis: (x: 0.0, y: 1.0, z: 0.0))
+                    .rotation3DEffect(.degrees(self.indexIsOfCurrentlyFailedAnswer(index) ? 90.0 : 0.0),
+                                      axis: (x: 1.0, y: 0.0, z: 0.0))
                 }
 
                 Text("Your current score is \(score).").foregroundColor(.white)

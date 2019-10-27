@@ -18,7 +18,8 @@ struct RootNavigation: View {
         ("Rock, Paper, Scissors", AnyView(RockPaperScissorsView())),
         ("BetterRest", AnyView(BetterRestView())),
         ("Word Scramble", AnyView(WordScrambleView())),
-        ("Animation Test", AnyView(AnimationsView()))
+        ("Animation Test", AnyView(AnimationsView())),
+        ("Animating Gestures & Transitions", AnyView(AnimatingGesturesAndTransitionsView()))
     ]
 
     var body: some View {

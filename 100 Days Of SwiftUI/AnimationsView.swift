@@ -13,6 +13,7 @@ struct AnimationsView: View {
     @State private var firstScaleAmount: CGFloat = 1.0
     @State private var secondScaleAmount: CGFloat = 1.0
     @State private var rotationAmount: Double = 0.0
+    @State private var lastButtonEnabled: Bool = false
 
     var body: some View {
         VStack {
@@ -60,14 +61,26 @@ struct AnimationsView: View {
             .clipShape(Circle())
             .rotation3DEffect(.degrees(rotationAmount), axis: (x: 1.0, y: 1.0, z: -1.0))
 
+            Divider()
+
+            Button("Tap Me") {
+                self.lastButtonEnabled.toggle()
+            }
+            .frame(width: 200.0, height: 80.0)
+            .background(lastButtonEnabled ? Color.blue : Color.gray)
+            .animation(nil)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: lastButtonEnabled ? 60.0 : 0.0))
+            .animation(.default) // <- This should make the clip animate
+
         }
     }
 }
 
 struct AnimationsView_Previews: PreviewProvider {
     static var previews: some View {
-        return NavigationView {
+        //return NavigationView {
             AnimationsView()
-        }
+        //}
     }
 }

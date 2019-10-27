@@ -20,9 +20,10 @@
 		50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1962350CB930011DD30 /* UnitConverterView.swift */; };
 		50CB2A022358592F0043E711 /* ViewsAndModifiersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */; };
 		50CB2A04235862A30043E711 /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB2A03235862A30043E711 /* RootNavigation.swift */; };
+		50E92B332363121B00114DDB /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E92B322363121B00114DDB /* AnimationsView.swift */; };
 		50FACF8223604028008A36F2 /* WordScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FACF8123604028008A36F2 /* WordScrambleView.swift */; };
 		50FACF86236048D5008A36F2 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50FACF85236048D5008A36F2 /* start.txt */; };
-		50E92B332363121B00114DDB /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E92B322363121B00114DDB /* AnimationsView.swift */; };
+		50FEFF572365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEFF562365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +42,10 @@
 		50A0B1962350CB930011DD30 /* UnitConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterView.swift; sourceTree = "<group>"; };
 		50CB2A012358592F0043E711 /* ViewsAndModifiersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiersView.swift; sourceTree = "<group>"; };
 		50CB2A03235862A30043E711 /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
+		50E92B322363121B00114DDB /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		50FACF8123604028008A36F2 /* WordScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleView.swift; sourceTree = "<group>"; };
 		50FACF85236048D5008A36F2 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
-		50E92B322363121B00114DDB /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
+		50FEFF562365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGesturesAndTransitionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				50FACF8123604028008A36F2 /* WordScrambleView.swift */,
 				50FACF85236048D5008A36F2 /* start.txt */,
 				50E92B322363121B00114DDB /* AnimationsView.swift */,
+				50FEFF562365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift */,
 				50A0B1882350BA2E0011DD30 /* Assets.xcassets */,
 				50A0B18D2350BA2E0011DD30 /* LaunchScreen.storyboard */,
 				50A0B1902350BA2E0011DD30 /* Info.plist */,
@@ -184,6 +187,7 @@
 				50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */,
 				50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */,
 				50E92B332363121B00114DDB /* AnimationsView.swift in Sources */,
+				50FEFF572365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift in Sources */,
 				50A0B1872350BA2D0011DD30 /* WeSplitView.swift in Sources */,
 				50CB2A04235862A30043E711 /* RootNavigation.swift in Sources */,
 				50CB2A022358592F0043E711 /* ViewsAndModifiersView.swift in Sources */,
