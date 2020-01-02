@@ -19,7 +19,8 @@ struct RootNavigation: View {
         ("BetterRest", AnyView(BetterRestView())),
         ("Word Scramble", AnyView(WordScrambleView())),
         ("Animation Test", AnyView(AnimationsView())),
-        ("Animating Gestures & Transitions", AnyView(AnimatingGesturesAndTransitionsView()))
+        ("Animating Gestures & Transitions", AnyView(AnimatingGesturesAndTransitionsView())),
+        ("iExpense", AnyView(ExpensesView()))
     ]
 
     var body: some View {

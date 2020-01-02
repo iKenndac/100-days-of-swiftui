@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ExpenseItem: Identifiable {
+struct ExpenseItem: Identifiable, Codable {
     let id: UUID = UUID()
     let name: String
     let type: String
@@ -16,14 +16,29 @@ struct ExpenseItem: Identifiable {
 }
 
 class Expense: ObservableObject {
-    @Published var items: [ExpenseItem] = []
-}
 
-// Stopped at: https://www.hackingwithswift.com/books/ios-swiftui/sharing-an-observed-object-with-a-new-view
+    init() {
+        guard let data = UserDefaults.standard.data(forKey: "Items"),
+            let decoded = try? JSONDecoder().decode([ExpenseItem].self, from: data) else {
+                items = []
+                return
+        }
+        items = decoded
+    }
+
+    @Published var items: [ExpenseItem] = [] {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(items) {
+                UserDefaults.standard.set(encoded, forKey: "Items")
+            }
+        }
+    }
+}
 
 struct ExpensesView: View {
 
     @ObservedObject var expenses: Expense = Expense()
+    @State private var showingAddExpense: Bool = false
 
     func removeItems(at indexSet: IndexSet) {
         expenses.items.remove(atOffsets: indexSet)
@@ -32,18 +47,76 @@ struct ExpensesView: View {
     var body: some View {
         List {
             ForEach(expenses.items) { item in
-                Text(item.name)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(item.name).font(.headline)
+                        Text(item.type)
+                    }
+
+                    Spacer()
+                    Text("$\(item.amount)")
+                }
             }.onDelete(perform: removeItems)
         }
         .navigationBarTitle("iExpense")
-        .navigationBarItems(trailing: Button(action: {
-            let test = ExpenseItem(name: "Test", type: "Personal", amount: 5)
-            self.expenses.items.append(test)
+        .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+            self.showingAddExpense = true
         }) {
             Image(systemName: "plus")
         })
+        .sheet(isPresented: $showingAddExpense, content: { AddView(expenses: self.expenses) })
     }
 
+}
+
+struct AddView: View {
+    @State private var name: String = ""
+    @State private var type: String = "Personal"
+    @State private var amount: String = ""
+
+    @State private var errorTitle = "Invalid Input"
+    @State private var errorMessage = ""
+    @State private var showingError = false
+
+    @ObservedObject var expenses: Expense
+    @Environment(\.presentationMode) var presentationMode
+
+    static let types: [String] = ["Business", "Personal"]
+
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("Name", text: $name)
+                Picker("Type", selection: $type) {
+                    ForEach(Self.types, id: \.self) {
+                        Text($0)
+                    }
+                }
+                TextField("Amount", text: $amount).keyboardType(.numberPad)
+            }
+            .navigationBarTitle("Add new expense")
+            .navigationBarItems(leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss() }, trailing: Button("Save") {
+                guard let actualAmount = Int(self.amount) else {
+                    self.errorMessage = "Please make sure you're entering a valid amount."
+                    self.showingError = true
+                    return
+                }
+
+                guard self.name.count > 0 else {
+                    self.errorMessage = "Please make sure you're entering a valid name."
+                    self.showingError = true
+                    return
+                }
+
+                let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
+                self.expenses.items.append(item)
+                self.presentationMode.wrappedValue.dismiss()
+            })
+            .alert(isPresented: $showingError, content: {
+                    Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            })
+        }
+    }
 }
 
 struct ExpensesView_Previews: PreviewProvider {
