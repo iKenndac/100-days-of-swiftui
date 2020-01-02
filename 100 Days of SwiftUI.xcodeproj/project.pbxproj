@@ -10,6 +10,7 @@
 		50457010235B7D7800188E5B /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045700F235B7D7800188E5B /* BetterRestView.swift */; };
 		50457012235C609500188E5B /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 50457011235C609500188E5B /* SleepCalculator.mlmodel */; };
 		505244972359B1D700D874A8 /* RockPaperScissorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505244962359B1D700D874A8 /* RockPaperScissorsView.swift */; };
+		506701E1237CA25D006FF4E8 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506701E0237CA25D006FF4E8 /* ExpensesView.swift */; };
 		506A3C6B2355C0AD00FDA554 /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */; };
 		50A0B1832350BA2D0011DD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1822350BA2D0011DD30 /* AppDelegate.swift */; };
 		50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A0B1842350BA2D0011DD30 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		5045700F235B7D7800188E5B /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 		50457011235C609500188E5B /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		505244962359B1D700D874A8 /* RockPaperScissorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsView.swift; sourceTree = "<group>"; };
+		506701E0237CA25D006FF4E8 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		506A3C6A2355C0AD00FDA554 /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		50A0B17F2350BA2D0011DD30 /* 100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A0B1822350BA2D0011DD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				50FACF85236048D5008A36F2 /* start.txt */,
 				50E92B322363121B00114DDB /* AnimationsView.swift */,
 				50FEFF562365F8C40087D6ED /* AnimatingGesturesAndTransitionsView.swift */,
+				506701E0237CA25D006FF4E8 /* ExpensesView.swift */,
 				50A0B1882350BA2E0011DD30 /* Assets.xcassets */,
 				50A0B18D2350BA2E0011DD30 /* LaunchScreen.storyboard */,
 				50A0B1902350BA2E0011DD30 /* Info.plist */,
@@ -183,6 +186,7 @@
 				50A0B1832350BA2D0011DD30 /* AppDelegate.swift in Sources */,
 				505244972359B1D700D874A8 /* RockPaperScissorsView.swift in Sources */,
 				50457012235C609500188E5B /* SleepCalculator.mlmodel in Sources */,
+				506701E1237CA25D006FF4E8 /* ExpensesView.swift in Sources */,
 				50457010235B7D7800188E5B /* BetterRestView.swift in Sources */,
 				50A0B1972350CB930011DD30 /* UnitConverterView.swift in Sources */,
 				50A0B1852350BA2D0011DD30 /* SceneDelegate.swift in Sources */,
